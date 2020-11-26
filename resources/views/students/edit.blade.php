@@ -27,11 +27,17 @@
                 </div>
                 <div class="form-group">
                     <label for="email">email</label>
-                    <input type="text" class="form-control" id="email" placeholder="masukkan email" name="email" value="{{ $student->email }}">
+                    <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="masukkan email" name="email" value="{{ $student->email }}">
+                    @error('email')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <label for="jurusan">jurusan</label>
-                    <input type="text" class="form-control" id="jurusan" placeholder="masukkan jurusan" name="jurusan" value="{{ $student->jurusan }}">
+                    <input type="text" class="form-control @error('jurusan') is-invalid @enderror" id="jurusan" placeholder="masukkan jurusan" name="jurusan" value="{{ $student->jurusan }}">
+                    @error('jurusan')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
                 <button type="submit" class="btn btn-primary">Ubah Data!</button>
             </form>
