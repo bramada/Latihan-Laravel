@@ -14,7 +14,7 @@
                     <p class="card-text">{{ $student->email }}</p>
                     <p class="card-text">{{ $student->jurusan }}</p>
                     <hr>
-                    <a href="/students/{{ $student->id }}/edit" class="btn btn-primary">Edit</a>
+                    <a href="{{ $student->id }}/edit" class="btn btn-primary">Edit</a>
                     <form action="{{ $student->id }}" method="post" class="d-inline">
                         @method('delete')
                         @csrf

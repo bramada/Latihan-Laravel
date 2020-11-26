@@ -8,7 +8,7 @@
         <div class="col-6">
             <h1 class="mt-3">Daftar Student</h1>
 
-            <a href="/students/create" class="btn btn-primary my-3">Tambah Data Student</a>
+            <a href="students/create" class="btn btn-primary my-3">Tambah Data Student</a>
 
             @if (session('status'))
                 <div class="alert alert-success">
